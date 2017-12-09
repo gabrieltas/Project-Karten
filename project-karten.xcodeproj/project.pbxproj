@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A10E4341FDC80890020A658 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10E4331FDC80890020A658 /* Player.swift */; };
+		1A10E4361FDC80CA0020A658 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10E4351FDC80CA0020A658 /* Colors.swift */; };
 		1A3D4BF31FD43EB40002B961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D4BF21FD43EB40002B961 /* AppDelegate.swift */; };
 		1A3D4BF51FD43EB40002B961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D4BF41FD43EB40002B961 /* ViewController.swift */; };
 		1A3D4BF81FD43EB40002B961 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D4BF61FD43EB40002B961 /* Main.storyboard */; };
@@ -14,6 +16,10 @@
 		1A3D4BFD1FD43EB40002B961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D4BFB1FD43EB40002B961 /* LaunchScreen.storyboard */; };
 		1A3D4C081FD43EB40002B961 /* project_kartenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D4C071FD43EB40002B961 /* project_kartenTests.swift */; };
 		1A3D4C131FD43EB40002B961 /* project_kartenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D4C121FD43EB40002B961 /* project_kartenUITests.swift */; };
+		1A3D4C241FD440FB0002B961 /* ScoreboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D4C231FD440FB0002B961 /* ScoreboardTableViewCell.swift */; };
+		1A4483661FD50C5F00341C27 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4483651FD50C5F00341C27 /* AddPlayerViewController.swift */; };
+		1A46667C1FDC99A100CC934C /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A46667B1FDC99A100CC934C /* ColorCollectionViewCell.swift */; };
+		1A5EEF9B1FD5095100B49681 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EEF9A1FD5095100B49681 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A10E4331FDC80890020A658 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1A10E4351FDC80CA0020A658 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1A3D4BEF1FD43EB30002B961 /* project-karten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-karten.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3D4BF21FD43EB40002B961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A3D4BF41FD43EB40002B961 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		1A3D4C0E1FD43EB40002B961 /* project-kartenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "project-kartenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3D4C121FD43EB40002B961 /* project_kartenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_kartenUITests.swift; sourceTree = "<group>"; };
 		1A3D4C141FD43EB40002B961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A3D4C231FD440FB0002B961 /* ScoreboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewCell.swift; sourceTree = "<group>"; };
+		1A4483651FD50C5F00341C27 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
+		1A46667B1FDC99A100CC934C /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A5EEF9A1FD5095100B49681 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A10E4321FDC807A0020A658 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A10E4331FDC80890020A658 /* Player.swift */,
+				1A10E4351FDC80CA0020A658 /* Colors.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1A3D4BE61FD43EB30002B961 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +118,11 @@
 		1A3D4BF11FD43EB30002B961 /* project-karten */ = {
 			isa = PBXGroup;
 			children = (
-				1A3D4BF21FD43EB40002B961 /* AppDelegate.swift */,
-				1A3D4BF41FD43EB40002B961 /* ViewController.swift */,
-				1A3D4BF61FD43EB40002B961 /* Main.storyboard */,
-				1A3D4BF91FD43EB40002B961 /* Assets.xcassets */,
-				1A3D4BFB1FD43EB40002B961 /* LaunchScreen.storyboard */,
+				1A10E4321FDC807A0020A658 /* Model */,
 				1A3D4BFE1FD43EB40002B961 /* Info.plist */,
+				1A3D4C201FD43EC30002B961 /* Supporting Files */,
+				1A3D4C211FD43ED00002B961 /* View Controllers */,
+				1A3D4C221FD43EDB0002B961 /* UI */,
 			);
 			path = "project-karten";
 			sourceTree = "<group>";
@@ -123,6 +143,36 @@
 				1A3D4C141FD43EB40002B961 /* Info.plist */,
 			);
 			path = "project-kartenUITests";
+			sourceTree = "<group>";
+		};
+		1A3D4C201FD43EC30002B961 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A3D4BF21FD43EB40002B961 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A3D4C211FD43ED00002B961 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A3D4BF41FD43EB40002B961 /* ViewController.swift */,
+				1A5EEF9A1FD5095100B49681 /* DetailViewController.swift */,
+				1A3D4C231FD440FB0002B961 /* ScoreboardTableViewCell.swift */,
+				1A4483651FD50C5F00341C27 /* AddPlayerViewController.swift */,
+				1A46667B1FDC99A100CC934C /* ColorCollectionViewCell.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1A3D4C221FD43EDB0002B961 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1A3D4BF61FD43EB40002B961 /* Main.storyboard */,
+				1A3D4BF91FD43EB40002B961 /* Assets.xcassets */,
+				1A3D4BFB1FD43EB40002B961 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3D4BF51FD43EB40002B961 /* ViewController.swift in Sources */,
+				1A4483661FD50C5F00341C27 /* AddPlayerViewController.swift in Sources */,
+				1A3D4C241FD440FB0002B961 /* ScoreboardTableViewCell.swift in Sources */,
+				1A10E4361FDC80CA0020A658 /* Colors.swift in Sources */,
 				1A3D4BF31FD43EB40002B961 /* AppDelegate.swift in Sources */,
+				1A10E4341FDC80890020A658 /* Player.swift in Sources */,
+				1A46667C1FDC99A100CC934C /* ColorCollectionViewCell.swift in Sources */,
+				1A5EEF9B1FD5095100B49681 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,12 +483,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CF32H8XYHX;
 				INFOPLIST_FILE = "project-karten/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SpaceWalk.com.project-karten";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -441,12 +499,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CF32H8XYHX;
 				INFOPLIST_FILE = "project-karten/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SpaceWalk.com.project-karten";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
