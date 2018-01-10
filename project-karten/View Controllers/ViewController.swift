@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var players = [Player]()
+    var selectedItem: Int!
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -27,11 +28,19 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        sortPlayers()
+        tableView.reloadData()
         hideTableViewIfIsEmpty()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        saveData()
+    }
+    
     @IBAction func unwind(segue: UIStoryboardSegue) {
-        
+        print(players.count)
+        saveData()
+        tableView.reloadData()
     }
     
     func loadData() {
@@ -55,6 +64,21 @@ class ViewController: UIViewController {
         }
     }
     
+    func sortPlayers() {
+        players.sort {
+            $0.userScore > $1.userScore
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            if let destination = segue.destination as? DetailViewController {
+                destination.player = players[selectedItem]
+         
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -72,8 +96,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         //Cell Fields
         cell.name.text = players[indexPath.item].userName
-        cell.points.text = "7"
-        cell.level.text = "2"
+        cell.points.text = players[indexPath.item].userScore.description
+        cell.level.text = players[indexPath.item].userLevel.description
         cell.color.backgroundColor = colors[players[indexPath.item].userColor].get().normal
         
         //Cell Position
@@ -94,7 +118,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedItem = indexPath.item
         performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            players.remove(at: indexPath.item)
+            
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
+            
+            saveData()
+            
+            print(players.count)
+            
+            self.hideTableViewIfIsEmpty()
+        }
     }
 }
 

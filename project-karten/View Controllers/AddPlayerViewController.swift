@@ -19,17 +19,33 @@ class AddPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
     }
     
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func doneButton(_ sender: Any) {
+        if (playerName.text?.isEmpty)! {
+            print("nope")
+            let alert = UIAlertController(title: "Empty Name", message: "You need to write a name for the new player.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: "unwindToScoreboard", sender: nil)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let player = Player(name: playerName.text!, score: 0, gear: 0, level: 0, color: selectedIndex)
+        let player = Player(name: playerName.text!, score: 0, gear: 0, level: 0, oneShot: 0, color: selectedIndex)
         
         if let destination = segue.destination as? ViewController {
+            
             destination.players.append(player)
             destination.tableView.reloadData()
         }
@@ -81,7 +97,7 @@ extension AddPlayerViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let edge = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        let edge = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         
         return edge
     }
