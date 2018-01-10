@@ -43,6 +43,8 @@ class DetailViewController: UIViewController {
         savePlayerLabels()
     }
     
+    //MARK - Action Buttons
+    
     @IBAction func buttonTaped(sender: UIButton) {
         switch sender.tag {
         case 1: updatePoints(label: levelPoints, withAddButtonType: false)
